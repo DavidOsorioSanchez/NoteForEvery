@@ -1,6 +1,7 @@
 package com.riwi.notas.api.dto.request;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,4 +16,6 @@ public class NoteReq {
   private String title;
   @NotBlank(message = "El contenido no puede estar vacio")
   private String content;
+  @NotNull(message = "El usuario tiene que tener notas")
+  private String userId;
 }
